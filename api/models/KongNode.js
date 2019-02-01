@@ -115,13 +115,13 @@ var defaultModel = _.merge(_.cloneDeep(require('../base/Model')), {
 
     cb()
   },
-  // seedData: [
-  //   {
-  //     "name": "default",
-  //     "kong_admin_url": "http://kong:8001",
-  //     "active": true
-  //   }
-  // ]
+  seedData: [
+    {
+      "name": process.env.KONG_NODE_SEED_NAME,
+      "kong_admin_url": process.env.KONG_NODE_SEED_ADMIN_URL,
+      "active": true
+    }
+  ]
 });
 
 
